@@ -1,0 +1,12 @@
+stages:
+  - build
+
+build-docker:
+  stage: build
+  image: docker:latest
+  services:
+    - docker:dind
+  script:
+    - docker info
+    - docker-compose -f docker-compose.yml build
+  
