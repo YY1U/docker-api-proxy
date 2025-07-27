@@ -1,0 +1,15 @@
+version: '3.8'  # Version of Docker Compose syntax
+
+services:       # We are defining 2 services (containers)
+
+  api1:         # This is the first container
+    build: ./api1         # Build from Dockerfile inside the "api1" folder
+    ports:
+      - "5001:5001"       # Maps your computer's port 5001 to the container's port 5001
+    depends_on:
+      - api2              # Wait for api2 to start before running api1
+
+  api2:         # This is the second container
+    build: ./api2         # Build from Dockerfile inside the "api2" folder
+    ports:
+      - "5002:5002"       # Maps port 5002 to 5002 inside the container
