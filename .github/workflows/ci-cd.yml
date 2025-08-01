@@ -23,4 +23,3 @@ jobs:
           context: .
           push: true
           tags: yuutayy1u/apidocker-api1:latest
-          tags: yuutayy1u/apidocker-api2:latest
