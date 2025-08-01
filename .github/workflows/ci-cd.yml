@@ -21,5 +21,6 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           context: .
+          file: ./api1/Dockerfile
           push: true
           tags: yuutayy1u/apidocker-api1:latest
