@@ -13,3 +13,4 @@ services:       # We are defining 2 services (containers)
     build: ./api2         # Build from Dockerfile inside the "api2" folder
     ports:
       - "5002:5002"       # Maps port 5002 to 5002 inside the container
+  
